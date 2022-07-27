@@ -14,7 +14,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Fasilkom Fest</title>
+    <title>Daftar Acara - Fasilkom Fest</title>
 
     <meta name="description" content="" />
 
@@ -72,7 +72,7 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="dashboard.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Dashboard">Dashboard</div>
@@ -88,13 +88,13 @@
                 <div data-i18n="Deskripsi">Deskripsi</div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-calendar-event"></i>
                 <div data-i18n="Jadwal">Jadwal</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="daftar-acara.html" class="menu-link">
                     <div data-i18n="Hari">Daftar Acara</div>
                   </a>
@@ -265,10 +265,91 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Jadwal /</span> Daftar Acara</h4>
+
+              <!-- Basic Layout & Basic with Icons -->
               <div class="row">
-                <div class="col-lg-8 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
+                <div class="col-xl">
+                  <div class="nav-align-top mb-4">
+                    <ul class="nav nav-pills mb-3" id="tabHari" role="tablist">
+                      <li class="nav-item">
+                        <button
+                          type="button"
+                          class="nav-link active"
+                          role="tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#day-1"
+                          aria-controls="day-1"
+                          aria-selected="true"
+                        >
+                          Day 1
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <button
+                          type="button"
+                          class="nav-link"
+                          role="tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#day-2"
+                          aria-controls="day-2"
+                          aria-selected="false"
+                        >
+                          Day 2
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" style="background-color: transparent !important; box-shadow:none !important; padding: 0 !important;">
+                      <div class="tab-pane fade show active" id="day-1" role="tabpanel">
+                        <div class="row" id="card-acara">
+                          <div class="col-md-6">
+                            <div class="card mb-3">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img class="card-img card-img-left" src="../assets/img/elements/12.jpg" alt="Card image" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Nama Acara</h5>
+                                    <p class="card-text">
+                                      Ini Deskripsi Acara.
+                                      This is a wider card with supporting text below as a natural lead-in to additional content.
+                                    </p>
+                                    <p class="card-text"><small class="text-muted">12:00 - 15:00 WIB</small></p>
+                                    <a href="javascript:void(0)" class="btn btn-primary">Edit</a>
+                                    <a href="javascript:void(0)" class="btn btn-danger">Hapus</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="day-2" role="tabpanel">
+                        <div class="row" id="card-acara">
+                          <div class="col-md-6">
+                            <div class="card mb-3">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img class="card-img card-img-left" src="../assets/img/elements/12.jpg" alt="Card image" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Nama Acara</h5>
+                                    <p class="card-text">
+                                      Ini Deskripsi Acara.
+                                      This is a wider card with supporting text below as a natural lead-in to additional content.
+                                    </p>
+                                    <p class="card-text"><small class="text-muted">12:00 - 15:00 WIB</small></p>
+                                    <a href="javascript:void(0)" class="btn btn-primary">Edit</a>
+                                    <a href="javascript:void(0)" class="btn btn-danger">Hapus</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
