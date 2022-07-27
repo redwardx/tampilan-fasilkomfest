@@ -14,7 +14,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Fasilkom Fest</title>
+    <title>Sponsor - Fasilkom Fest</title>
 
     <meta name="description" content="" />
 
@@ -72,7 +72,7 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="dashboard.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Dashboard">Dashboard</div>
@@ -111,7 +111,7 @@
                 </li>
               </ul>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="sponsor.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-book-open"></i>
                 <div data-i18n="Sponsor">Sponsor</div>
@@ -271,14 +271,241 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
-                <div class="col-lg-8 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
+              <h4 class="fw-bold py-3"><span class="text-muted fw-light">Sponsor /</span> Daftar Sponsor</h4>
+
+              <div class="mt-3 mb-3">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahSponsor">
+                  <i class='bx bx-plus'></i> Tambah sponsor
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="tambahSponsor" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel1">Form Tambah Sponsor</h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col mb-3">
+                            <label for="namaSponsor" class="form-label">Nama</label>
+                            <input type="text" id="namaSponsor" name="namaSponsor" class="form-control" placeholder="Masukkan Nama Sponsor" />
+                          </div>
+                        </div>
+                        <div class="row g-2">
+                          <div class="col mb-0">
+                            <label for="logo" class="form-label">Logo</label>
+                            <input type="file" id="logo" name="logo" class="form-control" />
+                          </div>
+                          <div class="col mb-0">
+                            <label for="tipe" class="form-label">Tipe</label>
+                            <select class="form-select" id="tipe" name="tipe" aria-label="Default select example">
+                              <option selected>Pilih tipe sponsor</option>
+                              <option value="1">Platinum</option>
+                              <option value="2">Silver</option>
+                              <option value="3">Bronze</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                          Batal
+                        </button>
+                        <button type="button" class="btn btn-primary">Simpan</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Table Sponsor -->
+              <div class="card">
+                <h5 class="card-header">Table Daftar Sponsor</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Nama</th>
+                        <th>Logo</th>
+                        <th>Tipe</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+                        <td>
+                          <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                            <li
+                              data-bs-toggle="tooltip"
+                              data-popup="tooltip-custom"
+                              class="avatar avatar-xs pull-up"
+                            >
+                              <img src="../assets/img/avatars/5.png" alt="Avatar"/>
+                            </li>
+                          </ul>
+                        </td>
+                        <td><span class="badge bg-label-primary me-1">Silver</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                              >
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-trash me-1"></i> Hapus</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>React Project</strong></td>
+                        <td>
+                          <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                            <li
+                              data-bs-toggle="tooltip"
+                              data-popup="tooltip-custom"
+                              class="avatar avatar-xs pull-up"
+                            >
+                              <img src="../assets/img/avatars/5.png" alt="Avatar"/>
+                            </li>
+                          </ul>
+                        </td>
+                        <td><span class="badge bg-label-warning me-1">Platinum</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-edit-alt me-2"></i> Edit</a
+                              >
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-trash me-2"></i> Hapus</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fab fa-vuejs fa-lg text-success me-3"></i> <strong>VueJs Project</strong></td>
+                        <td>
+                          <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                            <li
+                              data-bs-toggle="tooltip"
+                              data-popup="tooltip-custom"
+                              class="avatar avatar-xs pull-up"
+                            >
+                              <img src="../assets/img/avatars/5.png" alt="Avatar"/>
+                            </li>
+                          </ul>
+                        </td>
+                        <td><span class="badge bg-label-warning me-1">Platinum</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-edit-alt me-2"></i> Edit</a
+                              >
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-trash me-2"></i> Hapus</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Bootstrap Project</strong>
+                        </td>
+                        <td>
+                          <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                            <li
+                              data-bs-toggle="tooltip"
+                              data-popup="tooltip-custom"
+                              class="avatar avatar-xs pull-up"
+                            >
+                              <img src="../assets/img/avatars/5.png" alt="Avatar"/>
+                            </li>
+                          </ul>
+                        </td>
+                        <td><span class="badge bg-label-warning me-1">Platinum</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-edit-alt me-2"></i> Edit</a
+                              >
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-trash me-2"></i> Hapus</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <div class="demo-inline-spacing">
+                        <!-- Basic Pagination -->
+                        <nav aria-label="Page navigation">
+                          <ul class="pagination">
+                            <li class="page-item prev">
+                              <a class="page-link" href="javascript:void(0);"
+                                ><i class="tf-icon bx bx-chevron-left"></i
+                              ></a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="javascript:void(0);">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="javascript:void(0);">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="javascript:void(0);">3</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="javascript:void(0);">4</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="javascript:void(0);">5</a>
+                            </li>
+                            <li class="page-item next">
+                              <a class="page-link" href="javascript:void(0);"
+                                ><i class="tf-icon bx bx-chevron-right"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <!--/ Basic Pagination -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/ Basic Bootstrap Table -->
             </div>
             <!-- / Content -->
 
@@ -323,6 +550,9 @@
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <!-- <script src="../assets/js/ui-modals.js"></script> -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
